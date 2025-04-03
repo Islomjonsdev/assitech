@@ -1,11 +1,103 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { IoMdMenu } from "react-icons/io";
+import headerLogo from "../../assets/images/logo.jpg";
+import uzbekFlag from "../../assets/images/uzbek.png";
+import russFlag from "../../assets/images/russ.png";
+import engFlag from "../../assets/images/eng.png";
+import i18n from "../../locales/i18next";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
-  return (
-    <div className='pt-[20px] pb-[8px]'>
-        <div className='max-w-[1370px] w-full mx-auto px-[20px]'>sa</div>
-    </div>
-  )
-}
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedFlag, setSelectedFlag] = useState(uzbekFlag);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const { t } = useTranslation();
 
-export default Navbar
+  const linkData = [
+    { label: t("about_us"), to: "#about" },
+    { label: t("product"), to: "#product" },
+    { label: t("services"), to: "#services" },
+    { label: t("contact"), to: "/" },
+    { label: t("install"), to: "/" },
+  ];
+
+  const languages = [
+    { flag: uzbekFlag, lang: "Uzbek", code: "uz" },
+    { flag: russFlag, lang: "Russian", code: "ru" },
+    { flag: engFlag, lang: "English", code: "en" },
+  ];
+
+  const changeLanguage = (langCode, flag) => {
+    i18n.changeLanguage(langCode);
+    setSelectedFlag(flag);
+    setDropdownOpen(false);
+  };
+
+  return (
+    <div className="pt-[20px] pb-[8px]">
+      <div className="max-w-[1370px] w-full mx-auto px-[20px]">
+        <div className="flex items-center justify-between">
+          <Link>
+            <img
+              className="md:w-[220px] h-[65px]"
+              src={headerLogo}
+              alt="headerLogo"
+            />
+          </Link>
+
+          <div className="flex items-center gap-[25px]">
+            <ul className="hidden md:flex items-center gap-[25px]">
+              {linkData.map((link, id) => (
+                <li key={id}>
+                  <Link
+                    to={link.to}
+                    className="relative text-[#2E3A6B] font-semibold after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-[2px] after:bg-[#2E3A6B] after:transition-all after:duration-300 hover:after:w-full"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <div className="relative">
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="flex items-center gap-2 bg-white p-2 rounded-md"
+              >
+                <img
+                  src={selectedFlag}
+                  alt="Selected Language"
+                  className="w-6 h-6"
+                />
+              </button>
+              {dropdownOpen && (
+                <div className="absolute top-full right-0 mt-2 bg-white shadow-lg rounded-md">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => changeLanguage(lang.code, lang.flag)}
+                      className="flex items-center gap-2 p-2 hover:bg-gray-200 w-full"
+                    >
+                      <img
+                        src={lang.flag}
+                        alt={lang.lang}
+                        className="w-6 h-6"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <button className="text-white bg-[#c3242a] py-[5px] px-[10px] w-[35px] rounded-[5px] flex items-center justify-center md:hidden">
+              <IoMdMenu className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
