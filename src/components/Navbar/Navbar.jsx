@@ -15,7 +15,7 @@ const Navbar = () => {
   const { t } = useTranslation();
 
   const linkData = [
-    { label: t("about_us"), to: "#about" },
+    { label: t("about_us"), to: "#about_us" },
     { label: t("product"), to: "#product" },
     { label: t("services"), to: "#services" },
     { label: t("contact"), to: "/" },
@@ -50,12 +50,12 @@ const Navbar = () => {
             <ul className="hidden md:flex items-center gap-[25px]">
               {linkData.map((link, id) => (
                 <li key={id}>
-                  <Link
-                    to={link.to}
+                  <a
+                    href={link.to}
                     className="relative text-[#2E3A6B] font-semibold after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-[2px] after:bg-[#2E3A6B] after:transition-all after:duration-300 hover:after:w-full"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -63,7 +63,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center gap-2 bg-white p-2 rounded-md"
+                className="flex items-center gap-2 bg-white p-2 rounded-md cursor-pointer"
               >
                 <img
                   src={selectedFlag}
@@ -77,7 +77,7 @@ const Navbar = () => {
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code, lang.flag)}
-                      className="flex items-center gap-2 p-2 hover:bg-gray-200 w-full"
+                      className="flex items-center gap-2 p-2 hover:bg-gray-200 w-full cursor-pointer"
                     >
                       <img
                         src={lang.flag}

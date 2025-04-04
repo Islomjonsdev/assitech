@@ -3,7 +3,7 @@ import heroImage from "../../assets/images/image.jpg"
 
 const Hero = () => {
   return (
-    <section>
+    <section className='mb-[60px]'>
       <div className='max-w-[1370px] w-full mx-auto px-[20px]'>
         <div className='overflow-hidden rounded-[20px]'>
           <img 
