@@ -21,7 +21,7 @@ const Support = () => {
   ];
 
   return (
-    <section>
+    <section className="mb-[120px]">
       <div className="max-w-[1370px] w-full mx-auto px-[20px]">
         <div className="mb-[25px]">
           <h2 className="text-[50px] leading-[55px] max-w-[850px] w-full text-[#110d60] font-bold">
