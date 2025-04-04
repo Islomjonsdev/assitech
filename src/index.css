@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    font-family:  "Unbounded",sans-serif;
+    scroll-behavior: smooth;
+  }
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/unbounded-v8-latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-display: swap; 
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/unbounded-v8-latin-500.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-display: swap; 
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/fonts/unbounded-v8-latin-600.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-display: swap; 
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/unbounded-v8-latin-700.woff2') format('woff2');
+  }
