@@ -13,8 +13,8 @@ const Footer = () => {
   };
   return (
     <footer className="mt-[50px]">
-      <div className="grid grid-cols-2">
-        <div className="w-full py-[20px] px-[120px] bg-[#110d60]">
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="w-full py-6 px-6 md:px-20 bg-[#110d60] ">
           <div className="mt-[20px] mb-[50px]">
             <h3 className="text-[36px] text-white font-bold ">Contact</h3>
           </div>
