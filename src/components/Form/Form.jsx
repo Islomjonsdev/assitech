@@ -4,7 +4,7 @@ import smsImage from "../../assets/images/sms.jpeg";
 import callImage from "../../assets/images/call.jpeg";
 import clockImage from "../../assets/images/clock.jpeg";
 import SendForm from "../SendForm/SendForm";
-import formImg from "../../assets/images/formImage.png"
+import formImg from "../../assets/images/formImage.png";
 
 const Form = () => {
   const contactData = [
@@ -65,7 +65,10 @@ const Form = () => {
 
             <div>
               {contactData?.map(({ image, lines }, index) => (
-                <div className="flex items-center gap-[20px] my-[10px]" key={index}>
+                <div
+                  className="flex items-center gap-[20px] my-[10px]"
+                  key={index}
+                >
                   <img src={image} alt="" />
                   <div>
                     {lines?.map(({ street, location, email }, i) => (
@@ -87,7 +90,13 @@ const Form = () => {
             </div>
           </div>
         </div>
-        <img className="absolute top-[-140px] left-[50px]" src={formImg} alt="" />
+        <img
+          className="absolute top-[-140px] left-[50px]"
+          src={formImg}
+          alt="formImg"
+          width={362}
+          height={362}
+        />
       </div>
     </section>
   );
