@@ -1,6 +1,7 @@
 import './App.css'
 import AssiTech from './components/AssiTech/AssiTech'
 import Footer from './components/Footer/Footer'
+import Form from './components/Form/Form'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Natural from './components/Natural/Natural'
@@ -16,6 +17,7 @@ function App() {
     <Number />
     <Support />
     <Natural />
+    <Form />
     <Footer />
     </>
   )

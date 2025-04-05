@@ -27,7 +27,7 @@ const Number = () => {
       <div className="max-w-[1370px] w-full mx-auto px-[20px]">
         <Course />
         <div className="p-[50px] rounded-[24px] shadow-lg bg-white">
-          <div className="mb-[40px]" data-aos="fade-up">
+          <div className="mb-[40px]" data-aos="fade-up" style={{ fontFamily: "Unbounded, cursive" }}>
             <Title title="We are in numbers" />
           </div>
           <div className="flex items-center justify-between">
@@ -36,7 +36,7 @@ const Number = () => {
               return (
                 <div className="text-center" key={id}>
                   <div className="flex items-center">
-                    <span className="text-[#1a202c] text-[62px] font-semibold leading-[80px]">
+                    <span className="text-[#1a202c] text-[62px] font-semibold leading-[80px]" style={{ fontFamily: "Unbounded, cursive" }}>
                       {num}
                     </span>
                     <span className="text-[#110d60] text-[62px] font-semibold leading-[80px]">
