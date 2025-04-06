@@ -30,12 +30,12 @@ const Number = () => {
           <div className="mb-[40px]" data-aos="fade-up" style={{ fontFamily: "Unbounded, cursive" }}>
             <Title title="We are in numbers" />
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex-row md:flex items-center justify-between">
             {numbersData?.map((item, id) => {
               const { num, text } = item;
               return (
                 <div className="text-center" key={id}>
-                  <div className="flex items-center">
+                  <div className="text-center md:flex items-center">
                     <span className="text-[#1a202c] text-[62px] font-semibold leading-[80px]" style={{ fontFamily: "Unbounded, cursive" }}>
                       {num}
                     </span>
@@ -49,7 +49,7 @@ const Number = () => {
                 </div>
               );
             })}
-            <img src={rocketImage} alt="" />
+            <img className="hidden md:block" src={rocketImage} alt="" />
           </div>
         </div>
       </div>
