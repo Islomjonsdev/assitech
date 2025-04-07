@@ -1,4 +1,3 @@
-import React from "react";
 import { IoLogoInstagram } from "react-icons/io";
 import { LiaTelegramPlane } from "react-icons/lia";
 import { FaFacebookSquare } from "react-icons/fa";
@@ -7,10 +6,48 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import ContactModal from "../ui/contact-modal";
 import { IoIosCall } from "react-icons/io";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Header = () => {
   const [isOpenCotactModal, setIsOpenCotactModal] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [userNumber, setUserNumber] = useState("");
+  const [userMessage, setUserMessage] = useState("");
   const { t } = useTranslation();
+  const handleSendContact = (e) => {
+    e.preventDefault();
+
+    const token = "8073334034:AAGoATv5ukQU29RwtKG06Wm3v6IFViZvsfk";
+    const chat_id = 766849030;
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const name = userName;
+    const number = userNumber;
+    const message = userMessage;
+    const messageContent = `Ismi: ${name} \n Telefon raqami: ${number} \n Xabari: ${message}`;
+
+    axios({
+      url: url,
+      method: "POST",
+      data: {
+        chat_id: chat_id,
+        text: messageContent,
+      },
+    })
+      .then((res) => {
+        toast.success("Seccessfully send");
+        setUserName("");
+        setUserNumber("");
+        setUserMessage("");
+        setIsOpenCotactModal(false);
+        console.log(res?.data);
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.success("Failed to send");
+      });
+  };
   return (
     <>
       <header className="mb-[25px]">
@@ -52,7 +89,7 @@ const Header = () => {
               </h3>
             </div>
 
-            <form>
+            <form onSubmit={handleSendContact}>
               <div className="flex flex-col my-[25px]">
                 <label className="mb-2 text-[#1a202c] text-[16px] leading-[22px] text-start">
                   Enter your name <span>*</span>
@@ -61,6 +98,8 @@ const Header = () => {
                   className="px-4 border border-[grey] outline-none h-[48px] rounded-[8px]"
                   type="text"
                   placeholder="Enter your name"
+                  value={userName}
+                  onChange={(e) => setUserName(e.target.value)}
                 />
               </div>
               <div className="flex flex-col my-[25px] relative">
@@ -72,6 +111,8 @@ const Header = () => {
                   className="pl-[40px] pr-[16px] border border-[grey] outline-none h-[48px] rounded-[8px] relative"
                   type="tel"
                   placeholder="Phone number"
+                  value={userNumber}
+                  onChange={(e) => setUserNumber(e.target.value)}
                 />
                 <IoIosCall className="absolute top-[45px] left-[16px] w-4 h-4" />
               </div>
@@ -81,7 +122,9 @@ const Header = () => {
                 </label>
                 <textarea
                   className="py-2 px-4 border border-[grey] outline-none h-[48px] rounded-[8px] h-[117px]"
-                  placeholder="Your message "
+                  placeholder="Your message"
+                  value={userMessage}
+                  onChange={(e) => setUserMessage(e.target.value)}
                 />
               </div>
               <button className="bg-[#c32a2a] h-[45px] cursor-pointer w-full text-white rounded-[10px] text-[18px] leading-[24px] font-bold">

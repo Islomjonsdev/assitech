@@ -17,7 +17,7 @@ const Natural = () => {
           </div>
           <div>
             <img
-              className="absolute bottom-[-70px] right-0"
+              className="absolute bottom-[-170px] md:bottom-[-70px] right-0 w-[200x] h-[200px] md:w-[362px] md:h-[362px]"
               src={naturalImage}
               alt=""
             />
