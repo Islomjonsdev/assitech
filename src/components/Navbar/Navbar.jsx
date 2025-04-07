@@ -8,6 +8,10 @@ import engFlag from "../../assets/images/eng.png";
 import i18n from "../../locales/i18next";
 import { useTranslation } from "react-i18next";
 import HeaderModal from "../ui/header-modal";
+import { FiX } from "react-icons/fi";
+import { IoLogoInstagram } from "react-icons/io";
+import { LiaTelegramPlane } from "react-icons/lia";
+import { FaFacebookSquare } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -93,7 +97,7 @@ const Navbar = () => {
               </div>
 
               <button
-                className="text-white bg-[#c3242a] py-[5px] px-[10px] w-[35px] rounded-[5px] flex items-center justify-center md:hidden"
+                className="text-white bg-[#c3242a] py-[5px] px-[10px] w-[35px] rounded-[5px] cursor-pointer flex items-center justify-center md:hidden"
                 onClick={() => setIsOpen(true)}
               >
                 <IoMdMenu className="w-5 h-5" />
@@ -104,8 +108,45 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <HeaderModal close={setIsOpen}>
-          <div className="bg-[#2E3A6B] h-[100%]">
-            saloom
+          <div className="bg-[#2E3A6B] h-[100%] pt-[20px] pl-[40px]">
+            <div
+              className="bg-[#181864] w-[35px] h-[35px] flex items-center justify-center rounded-[50%] cursor-pointer mb-[50px]"
+              onClick={() => setIsOpen(false)}
+            >
+              <FiX className="w-6 h-6 text-white" />
+            </div>
+            <div className="flex flex-col gap-[25px]">
+              <ul className="flex flex-col gap-[25px]">
+                {linkData.map((link, id) => (
+                  <li key={id}>
+                    <a
+                      href={link.to}
+                      className="relative text-white font-semibold after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex items-center gap-[25px]">
+                <a href="https://www.instagram.com" target="_blank">
+                  <IoLogoInstagram className="text-white w-[26px] h-[26px]" />
+                </a>
+                <a href="https://telegram.org" target="_blank">
+                  <LiaTelegramPlane className="text-white w-[26px] h-[26px]" />
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                  <FaFacebookSquare className="text-white w-[26px] h-[26px]" />
+                </a>
+              </div>
+              <a
+                className="text-white text-[16px] leading-[24px] font-normal"
+                href="tel:+998998159885"
+              >
+                +998 99 815 98 85
+              </a>
+            </div>
           </div>
         </HeaderModal>
       )}
