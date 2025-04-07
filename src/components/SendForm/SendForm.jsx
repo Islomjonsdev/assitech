@@ -1,10 +1,12 @@
 import axios from "axios";
 import React from "react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { IoIosCall } from "react-icons/io";
 import { toast } from "react-toastify";
 
 const SendForm = () => {
+  const { t } = useTranslation()
   const [loading, setLoading] = useState(false);
   const [userName, setUserName] = useState("");
   const [userNumber, setUserNumber] = useState("");
@@ -45,19 +47,19 @@ const SendForm = () => {
     <div>
       <div className="mb-[15px]">
         <h3 className="text-[30px] font-semibold leading-[35px] text-white text-center">
-          What questions do you have for us?
+          {t("question_us")}
         </h3>
       </div>
 
       <form onSubmit={SendMessage}>
         <div className="flex flex-col my-[25px]">
           <label className="mb-2 text-white text-[16px] leading-[22px] text-start">
-            Enter your name <span>*</span>
+            {t("enter_name")} <span>*</span>
           </label>
           <input
             className="px-4 border border-white outline-none h-[48px] rounded-[12px]"
             type="text"
-            placeholder="Enter your name"
+            placeholder={t("enter_name")}
             id="name"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
@@ -66,12 +68,12 @@ const SendForm = () => {
         <div className="flex flex-col my-[25px] relative">
           <label className="mb-2 text-white text-[16px] leading-[22px] text-start">
             {" "}
-            Phone number <span>*</span>
+            {t("enter_number")} <span>*</span>
           </label>
           <input
             className="pl-[40px] pr-[16px] border border-white outline-none h-[48px] rounded-[12px] relative"
             type="tel"
-            placeholder="Phone number"
+            placeholder={t("enter_number")}
             id="number"
             value={userNumber}
             onChange={(e) => setUserNumber(e.target.value)}
@@ -80,11 +82,11 @@ const SendForm = () => {
         </div>
         <div className="flex flex-col my-[25px]">
           <label className="mb-2 text-white text-[16px] leading-[22px] text-start">
-            Your message <span>*</span>
+            {t("message")} <span>*</span>
           </label>
           <textarea
             className="py-2 px-4 border border-white outline-none h-[48px] rounded-[12px] h-[117px]"
-            placeholder="Your message "
+            placeholder={t("message")}
             id="text"
             value={userMessage}
             onChange={(e) => setUserMessage(e.target.value)}

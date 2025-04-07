@@ -2,8 +2,10 @@ import React from "react";
 import { IoLogoInstagram } from "react-icons/io";
 import { BsTelegram } from "react-icons/bs";
 import { FaFacebookSquare } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation()
   const data = {
     location: "Tashkent, Olmazor Yunusobod, massiv 11 52B",
     phone: "+998 99 815 98 85",
@@ -16,40 +18,40 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="w-full py-6 px-6 md:px-20 bg-[#110d60] ">
           <div className="mt-[20px] mb-[50px]">
-            <h3 className="text-[36px] text-white font-bold ">Contact</h3>
+            <h3 className="text-[36px] text-white font-bold ">{t("contact")}</h3>
           </div>
 
           <ul className="mb-[60px]">
             <li className="mb-[25px]">
               <span className="font-semibold text-[#edcb3f] text-[18px] my-2 leading-[24px]">
-                Company address / Central Sales Office:
+                {t("company")}
               </span>
               <p className="text-white text-[16px]">{data?.location}</p>
             </li>
             <li className="mb-[25px]">
               <span className="font-semibold text-[#edcb3f] text-[18px] my-2 leading-[24px]">
-                Phone:
+                {t("phone")}
               </span>
               <p className="text-white text-[16px]">{data?.phone}</p>
             </li>
             <li className="mb-[25px]">
               <span className="font-semibold text-[#edcb3f] text-[18px] my-2 leading-[24px]">
-                Mail:
+                {t("mail")}
               </span>
               <p className="text-white text-[16px]">{data?.mail}</p>
               <p className="text-white text-[16px]">{data?.mail1}</p>
             </li>
             <li className="mb-[25px]">
               <span className="font-semibold text-[#edcb3f] text-[18px] my-2 leading-[24px]">
-                Working schedule:
+                {t("schedule")}
               </span>
               <p className="text-white text-[16px]">{data?.schedule}</p>
             </li>
             <li>
               <span className="font-semibold text-[#edcb3f] text-[18px] my-2 leading-[24px]">
-                We are in social networks
+                {t("networks")}
               </span>
-              <div className="flex items-center gap-[15px]">
+              <div className="flex items-center gap-[15px] ">
                 <a className="text-white" href="#">
                   <IoLogoInstagram className="w-[26px] h-[26px]" />
                 </a>

@@ -85,19 +85,19 @@ const Header = () => {
           <div className="bg-white rounded-[4px] p-[15px]">
             <div className="">
               <h3 className="text-center text-[32px] text-[#2e3a6b] font-bold">
-                What questions do you have for us?
+                  {t("question_us")}
               </h3>
             </div>
 
             <form onSubmit={handleSendContact}>
               <div className="flex flex-col my-[25px]">
                 <label className="mb-2 text-[#1a202c] text-[16px] leading-[22px] text-start">
-                  Enter your name <span>*</span>
+                  {t("enter_name")} <span>*</span>
                 </label>
                 <input
                   className="px-4 border border-[grey] outline-none h-[48px] rounded-[8px]"
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder={t("enter_name")}
                   value={userName}
                   onChange={(e) => setUserName(e.target.value)}
                 />
@@ -105,12 +105,12 @@ const Header = () => {
               <div className="flex flex-col my-[25px] relative">
                 <label className="mb-2 text-[#1a202c] text-[16px] leading-[22px] text-start">
                   {" "}
-                  Phone number <span>*</span>
+                  {t("enter_number")} <span>*</span>
                 </label>
                 <input
                   className="pl-[40px] pr-[16px] border border-[grey] outline-none h-[48px] rounded-[8px] relative"
                   type="tel"
-                  placeholder="Phone number"
+                  placeholder={t("enter_number")}
                   value={userNumber}
                   onChange={(e) => setUserNumber(e.target.value)}
                 />
@@ -118,11 +118,11 @@ const Header = () => {
               </div>
               <div className="flex flex-col my-[25px]">
                 <label className="mb-2 text-[#1a202c] text-[16px] leading-[22px] text-start">
-                  Your message <span>*</span>
+                  {t("message")} <span>*</span>
                 </label>
                 <textarea
                   className="py-2 px-4 border border-[grey] outline-none h-[48px] rounded-[8px] h-[117px]"
-                  placeholder="Your message"
+                  placeholder={t("message")}
                   value={userMessage}
                   onChange={(e) => setUserMessage(e.target.value)}
                 />

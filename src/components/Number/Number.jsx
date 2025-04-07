@@ -2,24 +2,25 @@ import React from "react";
 import Title from "../Title/Title";
 import rocketImage from "../../assets/images/rocket.png";
 import Course from "../Course/Course";
+import { t } from "i18next";
 
 const Number = () => {
   const numbersData = [
     {
       num: 4,
-      text: "Brand",
+      text: t("brands"),
     },
     {
       num: 10,
-      text: "Dealers",
+      text: t("dealer"),
     },
     {
       num: 60,
-      text: "Employees",
+      text: t("employees"),
     },
     {
       num: 1000,
-      text: "Clients",
+      text: t("clients"),
     },
   ];
   return (
@@ -27,8 +28,8 @@ const Number = () => {
       <div className="max-w-[1370px] w-full mx-auto px-[20px]">
         <Course />
         <div className="md:p-[50px] p-[20px] rounded-[24px] shadow-lg bg-white">
-          <div className="mb-[40px]" data-aos="fade-up" style={{ fontFamily: "Unbounded, cursive" }}>
-            <Title title="We are in numbers" />
+          <div data-aos="fade-up" style={{ fontFamily: "Unbounded, cursive" }}>
+            <Title title={t("numbers")} />
           </div>
           <div className="flex-row md:flex items-center justify-between">
             {numbersData?.map((item, id) => {
@@ -36,7 +37,10 @@ const Number = () => {
               return (
                 <div className="text-center" key={id}>
                   <div className="text-center md:flex items-center">
-                    <span className="text-[#1a202c] text-[32px] sm:text-[45px] md:text-[55px] lg:text-[62px] font-semibold lading-[35px] sm:leading-[50px] md:leading-[60px] lg:leading-[80px]" style={{ fontFamily: "Unbounded, cursive" }}>
+                    <span
+                      className="text-[#1a202c] text-[32px] sm:text-[45px] md:text-[55px] lg:text-[62px] font-semibold lading-[35px] sm:leading-[50px] md:leading-[60px] lg:leading-[80px]"
+                      style={{ fontFamily: "Unbounded, cursive" }}
+                    >
                       {num}
                     </span>
                     <span className="text-[#110d60] text-[32px] sm:text-[45px] md:text-[55px] lg:text-[62px] font-semibold lading-[35px] sm:leading-[50px] md:leading-[60px] lg:leading-[80px]">

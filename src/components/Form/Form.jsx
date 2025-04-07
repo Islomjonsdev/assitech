@@ -5,8 +5,10 @@ import callImage from "../../assets/images/call.jpeg";
 import clockImage from "../../assets/images/clock.jpeg";
 import SendForm from "../SendForm/SendForm";
 import formImg from "../../assets/images/formImage.png";
+import { useTranslation } from "react-i18next";
 
 const Form = () => {
+  const { t } = useTranslation()
   const contactData = [
     {
       image: homeImage,
@@ -55,11 +57,10 @@ const Form = () => {
           <div className="w-full md:w-[654px] bg-[#1e2e3e] md:py-[20px] md:px-[70px] py-[10px] px-[20px]">
             <div className="flex flex-col items-center">
               <h3 className="text-[30px] font-semibold leading-[35px] text-white">
-                Контактная информация
+                {t("information")}
               </h3>
               <p className="my-[20px] text-[18px] text-white leading-[25px] text-white">
-                Вы можете получить больше информации с помощью этих контактных
-                данных
+                {t("details")}
               </p>
             </div>
 
