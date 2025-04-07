@@ -104,7 +104,7 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <HeaderModal close={setIsOpen}>
-          <div className="bg-white h-[100%]">
+          <div className="bg-[#2E3A6B] h-[100%]">
             saloom
           </div>
         </HeaderModal>
