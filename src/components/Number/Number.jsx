@@ -36,10 +36,10 @@ const Number = () => {
               return (
                 <div className="text-center" key={id}>
                   <div className="text-center md:flex items-center">
-                    <span className="text-[#1a202c] text-[62px] font-semibold leading-[80px]" style={{ fontFamily: "Unbounded, cursive" }}>
+                    <span className="text-[#1a202c] text-[32px] sm:text-[45px] md:text-[55px] lg:text-[62px] font-semibold lading-[35px] sm:leading-[50px] md:leading-[60px] lg:leading-[80px]" style={{ fontFamily: "Unbounded, cursive" }}>
                       {num}
                     </span>
-                    <span className="text-[#110d60] text-[62px] font-semibold leading-[80px]">
+                    <span className="text-[#110d60] text-[32px] sm:text-[45px] md:text-[55px] lg:text-[62px] font-semibold lading-[35px] sm:leading-[50px] md:leading-[60px] lg:leading-[80px]">
                       +
                     </span>
                   </div>

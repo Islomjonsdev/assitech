@@ -29,7 +29,7 @@ const AssiTech = () => {
   ];
 
   return (
-    <section className="mb-[100px]" id="about_us">
+    <section className="mb-[50px] md:mb-[100px]" id="about_us">
       <div className="max-w-[1370px] w-full mx-auto px-[20px]">
         <div className="mb-[40px]" data-aos="fade-up">
           <Title title={"ASSI Tech"} />
