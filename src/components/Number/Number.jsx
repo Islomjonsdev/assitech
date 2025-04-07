@@ -26,7 +26,7 @@ const Number = () => {
     <section className="mb-[80px]" id="product">
       <div className="max-w-[1370px] w-full mx-auto px-[20px]">
         <Course />
-        <div className="p-[50px] rounded-[24px] shadow-lg bg-white">
+        <div className="md:p-[50px] p-[20px] rounded-[24px] shadow-lg bg-white">
           <div className="mb-[40px]" data-aos="fade-up" style={{ fontFamily: "Unbounded, cursive" }}>
             <Title title="We are in numbers" />
           </div>

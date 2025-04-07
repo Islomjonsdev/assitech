@@ -48,11 +48,11 @@ const Form = () => {
     <section className="py-[35px] relative">
       <div className="max-w-[1118px] w-full mx-auto px-4">
         <div className="flex flex-col md:flex-row-reverse">
-          <div className="w-full md:w-[464px] bg-[#8a2be2] py-[23px] px-[70px] text-white">
+          <div className="w-full md:w-[464px] bg-[#8a2be2] md:py-[23px] md:px-[70px] py-[10px] px-[20px] text-white">
             <SendForm />
           </div>
 
-          <div className="w-full md:w-[654px] bg-[#1e2e3e] py-[20px] px-[70px]">
+          <div className="w-full md:w-[654px] bg-[#1e2e3e] md:py-[20px] md:px-[70px] py-[10px] px-[20px]">
             <div className="flex flex-col items-center">
               <h3 className="text-[30px] font-semibold leading-[35px] text-white">
                 Контактная информация
@@ -91,7 +91,7 @@ const Form = () => {
           </div>
         </div>
         <img
-          className="absolute top-[-140px] left-[50px]"
+          className="absolute md:top-[-140px] md:left-[50px] md:w-[362px] md:h-[362px] w-[200px] h-[200px] top-[-100px] left-[100px]"
           src={formImg}
           alt="formImg"
           width={362}

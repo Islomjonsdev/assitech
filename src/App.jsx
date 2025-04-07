@@ -1,3 +1,4 @@
+import { ToastContainer } from 'react-toastify'
 import './App.css'
 import AssiTech from './components/AssiTech/AssiTech'
 import Footer from './components/Footer/Footer'
@@ -19,6 +20,7 @@ function App() {
     <Natural />
     <Form />
     <Footer />
+    <ToastContainer />
     </>
   )
 }
