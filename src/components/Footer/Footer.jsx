@@ -14,7 +14,7 @@ const Footer = () => {
     schedule: "Monday - Friday: 9:00 - 18:00",
   };
   return (
-    <footer className="mt-[50px]">
+    <footer className="mt-[50px]" id="contact">
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="w-full py-6 px-6 md:px-20 bg-[#110d60] ">
           <div className="mt-[20px] mb-[50px]">

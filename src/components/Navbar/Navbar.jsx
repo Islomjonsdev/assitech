@@ -23,7 +23,7 @@ const Navbar = () => {
     { label: t("about_us"), to: "#about_us" },
     { label: t("product"), to: "#product" },
     { label: t("services"), to: "#services" },
-    { label: t("contact"), to: "/" },
+    { label: t("contact"), to: "#contact" },
     { label: t("install"), to: "/" },
   ];
 

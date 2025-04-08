@@ -23,7 +23,7 @@ const Support = () => {
   ];
 
   return (
-    <section className="mb-[150px]">
+    <section className="mb-[150px]" id="services">
       <div className="max-w-[1370px] w-full mx-auto px-[20px]">
         <div className="mb-[25px]">
           <h2 className="text-[32px] sm:text-[40px] lg:text-[50px] leading-[35px] sm:leading-[45px] lg:leading-[55px] max-w-[820px] w-full text-[#110d60] font-bold" style={{ fontFamily: "Unbounded, cursive" }}>
