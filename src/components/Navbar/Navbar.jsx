@@ -15,7 +15,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedFlag, setSelectedFlag] = useState(uzbekFlag);
+  const [selectedFlag, setSelectedFlag] = useState(russFlag);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const { t } = useTranslation();
 
