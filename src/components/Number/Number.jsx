@@ -3,8 +3,10 @@ import Title from "../Title/Title";
 import rocketImage from "../../assets/images/rocket.png";
 import Course from "../Course/Course";
 import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const Number = () => {
+  const { t } = useTranslation()
   const numbersData = [
     {
       num: 4,

@@ -30,7 +30,7 @@ i18n.use(initReactI18next).init({
 
         brands: "Brend",
         dealer: "Dilerlar",
-        Employees: "Xodimlar",
+        employees: "Xodimlar",
         clients: "Mijozlar",
         numbers: "Biz raqamlardamiz",
         suport: "Qo'llab-quvvatlaymiz",
@@ -46,7 +46,8 @@ i18n.use(initReactI18next).init({
         // Information
 
         information: "Bog'lanish uchun ma'lumot",
-        details: "Ushbu kontakt ma'lumotlaridan foydalanib qo'shimcha ma'lumot olishingiz mumkin",
+        details:
+          "Ushbu kontakt ma'lumotlaridan foydalanib qo'shimcha ma'lumot olishingiz mumkin",
         question_us: "Bizga qanday savollaringiz bor?",
         enter_name: "Ismingizni kiriting",
         enter_number: "Telefon raqami",
@@ -60,7 +61,16 @@ i18n.use(initReactI18next).init({
         phone: "Telefon",
         mail: "Pochta:",
         schedule: "Ish jadvali:",
-        networks: "Biz ijtimoiy tarmoqlardamiz:"
+        networks: "Biz ijtimoiy tarmoqlardamiz:",
+
+        // Courses
+
+        courses: "Bizda kurslar",
+        text1: "NEYROSONOGRAFIYA",
+        text2: "KATTALARNING NEVRAL EKOkardiografiyasi",
+        text3: "BOLALAR EKOkardiografiyasi",
+        text4: "AKUSHARLIK VA GINEKOLOGIYA",
+        text5: "Xomilaning EKOkardiografiyasi"
       },
     },
     ru: {
@@ -100,12 +110,14 @@ i18n.use(initReactI18next).init({
         delivery: "Поставляем",
         medical: "медицинское оборудование напрямую от производителя",
         solve: "Решаем",
-        tasks: "задачи комплексного медицинского оснащения и сервисного обслуживания",
+        tasks:
+          "задачи комплексного медицинского оснащения и сервисного обслуживания",
 
         // Information
 
         information: "Контактная информация",
-        details: "Вы можете получить больше информации с помощью этих контактных данных",
+        details:
+          "Вы можете получить больше информации с помощью этих контактных данных",
         question_us: "Какие вопросы у вас есть к нам?",
         enter_name: "Введите ваше имя",
         enter_number: "Номер телефона",
@@ -118,7 +130,16 @@ i18n.use(initReactI18next).init({
         phone: "Телефон",
         mail: "Почта:",
         schedule: "Режим работы:",
-        networks: "Мы в социальных сетях:"
+        networks: "Мы в социальных сетях:",
+
+        // Courses
+
+        courses: "Курсы, которые у нас есть",
+        text1: "НЕЙРОСОНОГРАФИЯ",
+        text2: "НЕЙРОВЗРОСЛАЯ ЭХОКАРДИОГРАФИЯОНОГРАФИЯ",
+        text3: "ДЕТСКАЯ ЭХОКАРДИОГРАФИЯ",
+        text4: "АКУШЕРСТВО И ГИНЕКОЛОГИЯ",
+        text5: "ФЕТАЛЬНАЯ ЭХОКАРДИОГРАФИЯ"
       },
     },
     en: {
@@ -129,7 +150,6 @@ i18n.use(initReactI18next).init({
         product: "Product",
         services: "Services",
         install: "Installation",
-        
 
         //  Hero
         assaTech1:
@@ -148,7 +168,7 @@ i18n.use(initReactI18next).init({
         // Brands
         brands: "Brand",
         dealer: "Dealers",
-        Employees: "Employees",
+        employees: "Employees",
         clients: "Clients",
         numbers: "We are in numbers",
         suport: "Support",
@@ -158,7 +178,8 @@ i18n.use(initReactI18next).init({
         delivery: "Supply",
         medical: "medical equipment directly from the manufacturer",
         solve: "Solve",
-        tasks: "tasks of comprehensive medical equipment and service maintenance",
+        tasks:
+          "tasks of comprehensive medical equipment and service maintenance",
 
         // Informatio
 
@@ -176,7 +197,16 @@ i18n.use(initReactI18next).init({
         phone: "Phone:",
         mail: "Mail:",
         schedule: "Working schedule",
-        networks: "We are in social networks"
+        networks: "We are in social networks",
+
+        // Courses
+
+        courses: "Courses we have",
+        text1: "NEUROSONOGRAPHY",
+        text2: "NEURAL ADULT ECHOCARDIOGRAPHYONOGRAPHY",
+        text3: "CHILDREN'S ECHOCARDIOGRAPHY",
+        text4: "OBSTETRICS AND GYNECOLOGY",
+        text5: "FETAL ECHOCARDIOGRAPHY"
       },
     },
   },

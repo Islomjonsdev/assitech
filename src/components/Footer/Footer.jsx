@@ -78,6 +78,7 @@ const Footer = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="Uzbekistan Map"
+            className="md:h-[100%] h-[600px]"
           ></iframe>
         </div>
       </div>

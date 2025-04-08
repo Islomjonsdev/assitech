@@ -1,21 +1,23 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Title from "../Title/Title";
 
 const Course = () => {
+  const { t } = useTranslation()
   const courseData = [
     {
-      body1: "НЕЙРОСОНОГРАФИЯ",
-      body2: "НЕЙРОВЗРОСЛАЯ ЭХОКАРДИОГРАФИЯОНОГРАФИЯ",
-      body3: "ДЕТСКАЯ ЭХОКАРДИОГРАФИЯ",
-      body4: "АКУШЕРСТВО И ГИНЕКОЛОГИЯ",
-      body5: "ФЕТАЛЬНАЯ ЭХОКАРДИОГРАФИЯ",
+      body1: t("text1"),
+      body2: t("text2"),
+      body3: t("text3"),
+      body4: t("text4"),
+      body5: t("text5"),
     },
   ];
 
   return (
     <section className="mb-[10px] md:mb-[110px]">
       <div className="mb-[24px] md:mb-[40px]" data-aos="fade-up">
-        <Title title="Курсы, которые у нас есть" />
+        <Title title={t("courses")} />
       </div>
       <div>
         {courseData?.map((item, id) => {

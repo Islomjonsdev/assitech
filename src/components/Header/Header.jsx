@@ -17,6 +17,7 @@ const Header = () => {
   const [userMessage, setUserMessage] = useState("");
   const { t } = useTranslation();
   const handleSendContact = (e) => {
+    setLoading(true)
     e.preventDefault();
 
     const token = "8073334034:AAGoATv5ukQU29RwtKG06Wm3v6IFViZvsfk";
@@ -46,6 +47,8 @@ const Header = () => {
       .catch((err) => {
         console.log(err);
         toast.success("Failed to send");
+      }).finally(() => {
+        setLoading(false)
       });
   };
   return (
@@ -139,7 +142,7 @@ const Header = () => {
                 />
               </div>
               <button className="bg-[#c32a2a] h-[45px] cursor-pointer w-full text-white rounded-[10px] text-[18px] leading-[24px] font-bold">
-                Sending
+                {loading ? "Sending..." : "Send"}
               </button>
             </form>
           </div>
