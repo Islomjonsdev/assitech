@@ -92,7 +92,7 @@ const Form = () => {
           </div>
         </div>
         <img
-          className="absolute md:top-[-140px] md:left-[50px] md:w-[362px] md:h-[362px] w-[200px] h-[200px] top-[-100px] left-[100px]"
+          className="absolute md:top-[-140px] md:left-[50px] md:w-[362px] md:h-[362px] w-[250px] h-[250px] top-[-50px] left-[75px]"
           src={formImg}
           alt="formImg"
           width={362}
