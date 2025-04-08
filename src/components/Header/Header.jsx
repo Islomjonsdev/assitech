@@ -13,7 +13,7 @@ const Header = () => {
   const [isOpenCotactModal, setIsOpenCotactModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [userName, setUserName] = useState("");
-  const [userNumber, setUserNumber] = useState("");
+  const [userNumber, setUserNumber] = useState("+998");
   const [userMessage, setUserMessage] = useState("");
   const { t } = useTranslation();
   const handleSendContact = (e) => {
@@ -112,7 +112,16 @@ const Header = () => {
                   type="tel"
                   placeholder={t("enter_number")}
                   value={userNumber}
-                  onChange={(e) => setUserNumber(e.target.value)}
+                  onChange={(e) => {
+                    const input = e.target.value
+                    const formatted = input.replace(/[^\d+]/g, "")
+
+                    if (!formatted.startsWith("+998")) return;
+
+                    if (formatted.length <= 13) {
+                      setUserNumber(formatted);
+                    }
+                  }}
                 />
                 <IoIosCall className="absolute top-[45px] left-[16px] w-4 h-4" />
               </div>
@@ -121,7 +130,7 @@ const Header = () => {
                   {t("message")} <span>*</span>
                 </label>
                 <textarea
-                  className="py-2 px-4 border border-[grey] outline-none h-[48px] rounded-[8px] h-[117px]"
+                  className="py-2 px-4 border border-[grey] outline-none h-[48px] rounded-[8px] h-[117px] resize-none"
                   placeholder={t("message")}
                   value={userMessage}
                   onChange={(e) => setUserMessage(e.target.value)}
