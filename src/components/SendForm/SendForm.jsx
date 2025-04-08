@@ -59,6 +59,7 @@ const SendForm = () => {
           <input
             className="px-4 border border-white outline-none h-[48px] rounded-[12px]"
             type="text"
+            required
             placeholder={t("enter_name")}
             id="name"
             value={userName}
@@ -73,6 +74,7 @@ const SendForm = () => {
           <input
             className="pl-[40px] pr-[16px] border border-[grey] outline-none h-[48px] rounded-[8px] relative"
             type="tel"
+            required
             placeholder={t("enter_number")}
             value={userNumber}
             onChange={(e) => {

@@ -97,6 +97,7 @@ const Header = () => {
                 <input
                   className="px-4 border border-[grey] outline-none h-[48px] rounded-[8px]"
                   type="text"
+                  required
                   placeholder={t("enter_name")}
                   value={userName}
                   onChange={(e) => setUserName(e.target.value)}
@@ -110,6 +111,7 @@ const Header = () => {
                 <input
                   className="pl-[40px] pr-[16px] border border-[grey] outline-none h-[48px] rounded-[8px] relative"
                   type="tel"
+                  required
                   placeholder={t("enter_number")}
                   value={userNumber}
                   onChange={(e) => {
