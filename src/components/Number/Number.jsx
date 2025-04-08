@@ -24,7 +24,7 @@ const Number = () => {
     },
   ];
   return (
-    <section className="mb-[80px]" id="product">
+    <section className="mb-[80px] pt-[50px] md:pt-[110px]" id="product">
       <div className="max-w-[1370px] w-full mx-auto px-[20px]">
         <Course />
         <div className="md:p-[50px] p-[20px] rounded-[24px] shadow-lg bg-white">

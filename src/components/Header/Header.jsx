@@ -50,7 +50,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="mb-[25px]">
+      <header>
         <div className="bg-[#2E3A6B] h-[60px] flex items-center">
           <div className="max-w-[1370px] w-full mx-auto px-[20px]">
             <div className="flex items-center justify-end gap-[10px]">
