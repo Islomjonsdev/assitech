@@ -10,7 +10,7 @@ const Natural = () => {
         <div className="flex items-center justify-between relative mb-[180px]">
           <div className="max-w-[900px] w-full">
             <h2
-              className="text-[32px] sm:text-[42px] md:text-[50px] lg:text-[65px] leading-[38px] sm:leading-[48px] md:leading-[55px] lg:leading-[60px] font-medium text-[#110d60]"
+              className="text-[25px] sm:text-[42px] md:text-[50px] lg:text-[65px] leading-[30px] sm:leading-[48px] md:leading-[55px] lg:leading-[60px] font-medium text-[#110d60]"
               data-aos="fade-up"
             >
               <span className="text-[#c3242a] font-bold">{t("delivery")}</span> {t("medical")}
@@ -27,7 +27,7 @@ const Natural = () => {
         <div className="flex items-end justify-end">
           <div className="max-w-[900px] w-full">
             <h2
-              className="text-[32px] sm:text-[42px] md:text-[50px] lg:text-[65px] leading-[38px] sm:leading-[48px] md:leading-[55px] lg:leading-[60px] font-medium text-[#110d60]"
+              className="text-[25px] sm:text-[42px] md:text-[50px] lg:text-[65px] leading-[30px] sm:leading-[48px] md:leading-[55px] lg:leading-[60px] font-medium text-[#110d60]"
               data-aos="fade-up"
             >
               <span className="text-[#c3242a] font-bold">{t("solve")}</span> {t("tasks")}
